@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Slackside+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Slackside+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<section class="hero-container">
+    <div class="hero-content">
+        <h1>Welcome to Leo's Camera</h1>
+        <p>A Silly Little Portfolio</p>
+        <button class="camera-button">
+            <img src="Assets/Asset 1.png" alt="black camera icon, hand sketched style">
+        </button>
+        <!--icon by Bjorn Andersson under Creative Commons -->
+        </div>
+        <div class="hero-image">
+            <img src="Assets/ducks.jpg" alt="several ducks at a person's feet">
+        </div>
+</section>
+<section class="content-container">
+    <div class="image-column">
+        <img src="assets/IMG_6039.jpg" alt="looking up at a mountain against a misty sky">
+    </div>
+    <div class="content-column">
+        <h2> Located in the Foothills</h2>
+        <p> Discover the enchanting world of Leo's Camera, a photography portfolio based in Alberta 
+            that captures the essence of everyday life with a fresh perspective. This portfolio is a 
+            testament to the beauty found in the mundane, transforming the familiar into the extraordinary. 
+            By focusing on the everyday moments and the commonplace, Leo's Camera invites viewers to see the 
+            world anew, appreciating the simple, often overlooked details that make life rich and vibrant. 
+            Each image tells a story, a narrative of the ordinary that, through the lens of a skilled photographer, 
+            becomes extraordinary. Whether it's the serene beauty of a sunset over the Alberta plains or the 
+            quiet moments shared with family and friends, Leo's Camera brings these moments to life, making them 
+            feel new again. This portfolio is a celebration of life's simple pleasures, a reminder that the 
+            extraordinary can be found in the ordinary, and that every moment, no matter how mundane, is worth 
+            capturing and cherishing. </p>
+    </div>
+</section>
+<section class="card-container">
+    <div class="card">
+            <img src="assets/IMG_5686.JPG" alt="film photo of clouds and a street light">
+            <h3>shot on 35mm</h3>
+
+    <button class="card-button">
+            <p>click to view</p>
+    </button>
+        </div>
+        <div class="card">
+            <img src="assets/IMG_3700.jpg" alt="man walking at night under broken coca-cola sign">
+            <h3>night shots</h3>
+    <button class="card-button">
+            <p>click to view</p>
+    </button>
+        </div>
+        <div class="card">
+            <img src="assets/IMG_7411.JPG" alt="black and white photo of bee flying near a flower">
+            <h3>black and white</h3>
+    <button class="card-button">
+            <p>click to view</p>
+        </button>
+        </div>
+</section>
+    <section class="video-container">
+        <div class="video-content">
+            <h1> How To Prevent Brain Rot While Editing Photos </h1>
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LvZYd6S5i-4?si=cbY_uWXHHGuKVKZW" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+        encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen></iframe>
+    </section>
+    <section class="accordion-container">
+    <div class="accordion">
+        <div class="accordion-item" id="question1">
+            <h2 class="accordion-header">How do I book a photoshoot?</h2>
+            <div class="accordion-content">
+                <p>To book a photoshoot, simply visit our <a href="#">contact page</a> and fill out the form. We'll get back to you as soon as possible to discuss your requirements and schedule.</p>
+            </div>
+        </div>
+        <div class="accordion-item" id="question2">
+            <h2 class="accordion-header">What equipment do you use?</h2>
+            <div class="accordion-content">
+                <p>We use professional-grade cameras and lenses to ensure high-quality images. Our equipment is carefully selected to suit various photography styles and situations.</p>
+            </div>
+        </div>
+        <div class="accordion-item" id="question3">
+            <h2 class="accordion-header">Can I request specific edits?</h2>
+            <div class="accordion-content">
+                <p>Yes, absolutely! We welcome your input and can accommodate specific editing requests to ensure your photos match your vision perfectly.</p>
+            </div>
+        </div>
+    </div>
+</section>
+          <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const accordionItems = document.querySelectorAll(".accordion-item");
+
+    accordionItems.forEach(item => {
+        const header = item.querySelector(".accordion-header");
+        header.addEventListener("click", function() {
+            accordionItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove("active");
+                }
+            });
+            item.classList.toggle("active");
+        });
+    });
+});
+            </script>
+  <section class="footer-container">
+      <div>&copy; Leo's Camera. All Rights Reserved. <span id="copyright-year"></span></div>
+      <script>
+        window.addEventListener('load', function() {
+            var date = new Date();
+            var year = date.getFullYear();
+            document.getElementById('copyright-year').textContent = year;
+        });
+        </script>
+    </div>
+  </section>
+
+</body>
+</html>
