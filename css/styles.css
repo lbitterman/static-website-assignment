@@ -202,3 +202,18 @@
     height: 75px;
     position: relative;
   }
+
+  a {
+    color: black; 
+    text-decoration: none; 
+}
+
+
+a:hover {
+    color: #ffd991;
+}
+
+a:active {
+    color:grey;
+}
+
