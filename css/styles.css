@@ -25,6 +25,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    overflow: hidden;
   }
 
 
@@ -37,6 +38,7 @@
     opacity: 70%;
     border: none;
     z-index: 0;
+    overflow: hidden;
 }
 
 .camera-button {
@@ -217,3 +219,71 @@ a:active {
     color:grey;
 }
 
+
+
+/* Media query for mobile */
+@media screen and (max-width: 768px) {
+  /* Adjustments for mobile screens */
+
+  /* Fonts and Typography */
+  h1, h2 {
+      font-size: 2rem; /* Adjust font size for headings */
+  }
+
+  p {
+      font-size: 1rem; /* Adjust font size for paragraphs */
+  }
+
+  .accordion-header {
+      font-size: 1rem; /* Adjust font size for accordion headers */
+  }
+
+  /* Layout and Containers */
+  .hero-content {
+      font-size: 2rem; 
+      overflow: hidden;/* Adjust font size for hero content */
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+      opacity: 30%; 
+      background-position: center; /* Adjust opacity for hero image */
+  }
+
+  .content-container {
+      grid-template-columns: 1fr; /* Adjust grid layout for content container */
+  }
+
+  .image-column {
+    display: flex;
+    justify-self: center;
+      width: 100%;
+       /* Adjust image column width */
+  }
+
+  .content-column {
+      padding: 2rem; /* Adjust padding for content column */
+  }
+
+  .card-container {
+      grid-template-columns: 1fr; /* Adjust grid layout for card container */
+  }
+
+  .card {
+      width: 90%; /* Adjust width of cards */
+      margin: 20px auto; /* Adjust margin for centering cards */
+  }
+
+  /* Buttons */
+  .camera-button,
+  .card-button {
+      font-size: 1rem; /* Adjust font size for buttons */
+  }
+
+  /* Footer */
+  .footer-container {
+      height: 80px; /* Adjust height of footer */
+  }
+}
